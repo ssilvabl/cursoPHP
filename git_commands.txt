@@ -1,0 +1,35 @@
+0. Configurar git en el equipo
+> git config --user.name "user_name"
+> git config --user.email "email"
+
+1. Inicializar repositorio vacío
+> git init
+
+2. Validar el estado de los archivos en el directorio
+> git status -s
+
+2. Agregar archivos al repositorio
+> git add file_name
+Para todos los archivos
+> git add .
+
+3. Agregar confirmación de los cambios que se realizaron
+> git commit -m "message"
+
+3. Agregar la confirmación de los cambios que se realizaron y añadir ficheros al repositorio
+> git commit -am "message"
+
+3. Listar todas las versiones locales de los cambios en el repositorio
+> git log --oneline
+
+4. Regresar a una versión anterior
+> git reset --hard version_code
+
+4. Enviar cambios locales al repositorio remoto pro primera vez
+> git remote add origin https://github.com/ssilvabl/python.git
+
+5. Enviar cambios al repositorio remoto
+> git push -u origin master
+
+6. Renombrar la rama actual
+git branch -M main
