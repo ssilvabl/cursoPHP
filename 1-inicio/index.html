@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Declaración del tipo de documento HTML -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el diseño sea receptivo, ajustándose al ancho del dispositivo -->
+    <title>Iniciar Sesión</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    
+    <!-- Importar Materialize CSS para usar su framework de diseño -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    
+    <!-- Importar Google Icons para usar íconos personalizados -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenido principal de la página -->
+    <main>
+        <div class="container"> <!-- Contenedor principal que centra el contenido -->
+            <!-- Filas y columnas para centrar el formulario en la página -->
+            <div class="row"> <!-- Fila que contiene el formulario de inicio de sesión -->
+                <div class="col s12 m8 offset-m2 l6 offset-l3"> <!-- Columna que se adapta a diferentes tamaños de pantalla con márgenes laterales para centrar -->
+                    <div class="card"> <!-- Tarjeta de Materialize que encierra el formulario -->
+                        <div class="card-content"> <!-- Contenido de la tarjeta -->
+                            <span class="card-title">Iniciar Sesión</span> <!-- Título del formulario -->
+                            <p>Regístrese para iniciar sesión</p> <!-- Descripción bajo el título -->
+                            <form action="login.php" method="post"> <!-- Formulario de inicio de sesión, la acción es # indicando que no enviará datos a ningún servidor en este ejemplo -->
+                                <!-- Campo de correo electrónico -->
+                                <div class="input-field"> <!-- Contenedor para el campo de entrada de Materialize -->
+                                    <input type="email" id="email" name="username" placeholder="hello@reallygreatsite.com" required> <!-- Campo para ingresar el correo electrónico -->
+                                    <label for="email">Correo Electrónico</label> <!-- Etiqueta asociada al campo de correo electrónico -->
+                                </div>
+                                <!-- Campo de contraseña -->
+                                <div class="input-field"> <!-- Contenedor para el campo de entrada de Materialize -->
+                                    <input type="password" id="password" name="password" placeholder="******" required> <!-- Campo para ingresar la contraseña -->
+                                    <label for="password">Contraseña</label> <!-- Etiqueta asociada al campo de contraseña -->
+                                </div>
+                                <!-- Botón de enviar -->
+                                <button type="submit" class="btn waves-effect waves-light">Ingresar</button> <!-- Botón para enviar el formulario, con efecto de ondas al hacer clic -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Importar Materialize JavaScript para funcionalidad interactiva -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* styles.css */
+
+/* Establece el diseño general del cuerpo del documento */
+body {
+    display: flex; /* Flexbox para centrar el contenido */
+    flex-direction: column; /* Dirección del eje principal como columna */
+    min-height: 100vh; /* Altura mínima de la ventana gráfica */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+/* Estilos para la etiqueta <main> */
+main {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Estilos para el encabezado y su contenido */
+header .nav-wrapper {
+    background-color: #fff; /* Fondo blanco */
+    border-bottom: 1px solid #000; /* Borde inferior negro */
+}
+
+header .brand-logo {
+    color: #000; /* Color del texto negro */
+    padding-left: 1em; /* Espaciado a la izquierda */
+}
+
+/* Estilos para la tarjeta (card) */
+.card {
+    padding: 2em; /* Relleno interno de 2em */
+}
+
+/* Estilos para el título de la tarjeta */
+.card .card-title {
+    font-size: 2em; /* Tamaño de fuente grande */
+    color: #333; /* Color del texto gris oscuro */
+}
+
+/* Estilos para el párrafo dentro de la tarjeta */
+.card p {
+    color: #777; /* Color del texto gris claro */
+}
+
+/* Estilos para el botón */
+.btn {
+    width: 100%; /* Ancho completo */
+    background-color: #000; /* Fondo negro */
+}
+
+/* Estilos para el botón al pasar el ratón por encima */
+.btn:hover {
+    background-color: #333; /* Fondo gris oscuro */
+}
