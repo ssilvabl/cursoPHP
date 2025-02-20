@@ -70,4 +70,16 @@
     echo "Su opción no es válida";
  }
 
+ // USO DE OPERADORES LÓGICOS
+ $name = "santiago";
+ $password = 12346;
+
+ echo "<hr/>";
+
+if($name == "santiago" && $password == 123456) {
+   echo "¡Puedes acceder!";
+}else {
+   echo "No tienes acceso";
+}
+
 ?>
