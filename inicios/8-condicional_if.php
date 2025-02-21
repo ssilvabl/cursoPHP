@@ -20,6 +20,11 @@
  * > Mayor que
  * <= Menor o igual que
  * >= Mayor o igual que
+ * 
+ * // OPERADORES LÓGICOS
+ * && and Y
+ * || or O
+ * ! not No
  */
 
  $color = "rojo";
@@ -81,5 +86,43 @@ if($name == "santiago" && $password == 123456) {
 }else {
    echo "No tienes acceso";
 }
+
+echo "<hr/>";
+
+$pais = "Perú"; 
+
+if($pais == "Colombia" || $pais == "Venezuela" || $pais == "Perú") {
+   echo "Es un país de latinoamérica";
+}else {
+   echo "No es un país de latinoamérica";
+}
+
+echo "<hr/>";
+// Estructura de control Switch -> Sirve para evaluar últiples opciones con una variable
+$opcion = 5;
+
+switch ($opcion) {
+   case 1:
+      echo "Opción 1";
+      break;
+   case 2:
+      echo "Opción 2";
+      break;
+   case 3:
+      echo "Opción 3";
+      break;
+   default:
+      echo "Está fuera de rango";
+}
+
+// Operador GOTO -> Sirve para poder saltarse a un punto en específico en el código
+goto marca;
+
+echo "Hola, mundo";
+echo "Hola, mundo";
+echo "Hola, mundo";
+
+marca:
+echo "Se salta aquí";
 
 ?>
