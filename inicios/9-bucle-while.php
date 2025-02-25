@@ -37,4 +37,15 @@ while($multiplicador <= 10) {
 // Mostrar los detalles sobre una variable, útil para depurar el código
 var_dump($numero);
 
+
+// BUCLE DO WHILE
+// Sirve para ejecutar el código del bucle por lo menos una vez, ya que la condición se evalúa a lo último
+
+$edad = 18;
+$contador = 1;
+do{
+    echo "Puedes ingresar por haber llegado de primero <br/>";
+    $contador ++;
+}while($edad >= 18 && $contador <= 5);
+
 ?>
