@@ -5,18 +5,38 @@ include_once 'connection.php';
 
 echo '<br/>';
 
+// ## LISTAR TAREAS ##
 // Obtener todos los datos de la DB
 $sql_read = 'SELECT * FROM tasks';
 
 // Obtener la conexión de la DB y preparar la sentencia SQL
-$conn_query = $pdo->prepare($sql_read);
+$conn_query_read = $pdo->prepare($sql_read);
 // Ejecutar la conexión y consulta SQL
-$conn_query->execute();
+$conn_query_read->execute();
 
 // Devolver array con el resultado
-$result = $conn_query->fetchAll();
+$result = $conn_query_read->fetchAll();
 
-var_dump($result);
+// ## AGREGAR TAREAS ##
+// Validar si los datos del formulario se están enviando por POST
+if($_POST) {
+    // Guardar datos del formulario
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+
+    // Enviar datos a la DB
+    // Consulta SQL para añadir datos
+    $sql_add = 'INSERT INTO tasks (title, description) VALUES (?, ?)';
+
+    // Obtener la conexión con la DB y preparar sentencia SQL
+    $conn_query_add = $pdo->prepare($sql_add);
+
+    // Ejecutar la conexión con la DB y la consulta SQL (con los placeholders)
+    $conn_query_add->execute(array($title, $description));
+
+    // Redirigir a una página
+    header('location:index.php');
+}
 
 ?>
 
@@ -33,6 +53,7 @@ var_dump($result);
 
     <div class="container">
         <div class="row">
+            <!--Listar tareas-->
             <div class="col-md-6">
 
                 <?php foreach($result as $data): ?>
@@ -48,6 +69,17 @@ var_dump($result);
 
                 <?php endforeach ?>
 
+            </div>
+            
+            <!--Controles para las tareas-->
+            <div class="col-md-6">
+                <form method="POST">
+                    <h2>Nueva Tarea</h2>
+                    <input type="text" class="form-control" name="title">
+                    <input type="text" class="form-control mt-3" name="description">
+                    <button class="btn btn-primary mt-3">Agregar</button>
+
+                </form>
             </div>
         </div>
     </div>
